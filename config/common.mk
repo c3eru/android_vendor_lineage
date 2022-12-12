@@ -224,3 +224,7 @@ include vendor/lineage/config/version.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/lineage/config/partner_gms.mk
+
+ifeq ($(WITH_GAPPS), true)
+    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
+endif
